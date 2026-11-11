@@ -1,0 +1,54 @@
+/* Halloween poem website — responsive from 400px to 1200px and beyond */
+* { box-sizing: border-box; }
+html { font-size: 16px; }
+body {
+  margin: 0;
+  padding: 30px 18px;
+  color: #252525;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #191b20;
+  background-image: linear-gradient(rgba(13,15,20,.48),rgba(13,15,20,.58)), url("images/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px;
+  background-color: #F2EDE5;
+  box-shadow: 0 12px 45px rgba(0,0,0,.32);
+}
+.hero { display: block; width: 100%; height: auto; max-height: 300px; object-fit: cover; }
+.intro { margin: 26px 0 24px; }
+h1 { margin: 0 0 6px; font: 600 clamp(2.4rem, 5vw, 3.8rem)/1.05 'Cormorant Garamond', serif; }
+.byline { margin: 0 0 12px; color: #555; line-height: 1.6; }
+a { color: #35302b; text-underline-offset: 3px; overflow-wrap: anywhere; }
+a:hover, a:focus-visible { color: #8b4a24; }
+.poem {
+  padding: 28px 20px;
+  border: 1px solid #c8c2ba;
+  background-color: #faf8f4;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: break-word;
+}
+.poem p { margin: 0 0 1.4em; }
+.poem p:last-child { margin-bottom: 0; }
+.credits { margin-top: 24px; padding-top: 16px; border-top: 1px solid #c8c2ba; font-size: .76rem; line-height: 1.6; }
+.credits h2 { margin: 12px 0 8px; font: 600 .78rem/1.5 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: .06em; }
+.credits p { margin: 0 0 8px; }
+@media (max-width: 600px) {
+  body { padding: 12px; background-attachment: scroll; }
+  .container { padding: 14px; }
+  .hero { max-height: none; }
+  .intro { margin: 22px 0; }
+  .poem { padding: 20px 10px; font-size: 1.18rem; line-height: 1.35; }
+  .credits { font-size: .7rem; }
+}
